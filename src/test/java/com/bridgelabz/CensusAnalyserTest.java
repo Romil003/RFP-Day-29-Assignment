@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 public class CensusAnalyserTest {
-    private static final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\RFP Day 29 Assignment\\RFP Day 29 Assignment\\src\\main\\java\\com\\bridgelabz\\IndiaStateCensusData.csv";
+    private static final String INDIA_CENSUS_CSV_FILE_PATH = "D:\\RFP Day 29 Assignment\\RFP Day 29 Assignment\\src\\main\\java\\com\\bridgelabz\\IndiaStateCode.csv";
     private static final String WRONG_CSV_FILE_PATH = "./src/main/resources/IndiaStateCensusData.csv";
 
     @Test
@@ -13,7 +13,7 @@ public class CensusAnalyserTest {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             int numOfRecords = censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_CSV_FILE_PATH);
-            Assert.assertEquals(29,numOfRecords);
+            Assert.assertEquals(37,numOfRecords);
         } catch (CensusAnalyserException e) { }
     }
 
